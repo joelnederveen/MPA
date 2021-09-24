@@ -11,9 +11,22 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're songs
                 </div>
+                <table style="width: 50%;">
+                    <tr>
+                        <th scope="col">Song</th>
+                        <th scope="col">SongID</th>
+                        <th scope="col">Datumtoegevoegd</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Playlist</th>
+                    </tr>
                 @foreach($Songs as $song)
-                    {{$song->songname}}
+                    <td>{{$song->songname}}</td>
+                    <td>{{$song->id}}</td>
+                    <td>{{$song->created_at}}</td>
+                    <td>{{$song->genre}}</td>
+                    <td>{{$song->playlist}}</td>
                 @endforeach
+
                 <br>
                 <br>
                 <br>
