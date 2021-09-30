@@ -17,6 +17,10 @@ class CreateSongsTable extends Migration
             $table->id();
             $table->string('songname');
             $table->timestamps();
+            $table->string('genres');
+            $table->string('saved_list');
+            $table->string('saved_list_songs');
+
         });
     }
 

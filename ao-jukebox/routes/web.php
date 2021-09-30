@@ -21,7 +21,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/Song', [\App\Http\Controllers\SongController::class, 'index']);
+Route::get('/Song', [\App\Http\Controllers\SongController::class, 'index'])->name('song');
+
+Route::get('/playlist', [\App\Http\Controllers\SongController::class, 'playlist'])->name('playlist');
+
+Route::get('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdd'])->name('songAdd');
 
 
 require __DIR__.'/auth.php';
