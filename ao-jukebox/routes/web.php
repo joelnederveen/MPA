@@ -23,9 +23,10 @@ Route::get('/dashboard', function () {
 
 Route::get('/Song', [\App\Http\Controllers\SongController::class, 'index'])->name('song');
 
-Route::get('/playlist', [\App\Http\Controllers\SongController::class, 'playlist'])->name('playlist');
+//Route::get('/playlist', [\App\Http\Controllers\SongController::class, 'playlist'])->name('playlist');
 
 Route::get('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdd'])->name('songAdd');
 
-
+Route::get('/playlist', [App\Http\Controllers\playlistController::class, 'index'])->name('Playlist.index');
+Route::get('/playlist/add/{id}', [App\Http\Controllers\playlistController::class, 'add'])->name('playlist.add');
 require __DIR__.'/auth.php';
