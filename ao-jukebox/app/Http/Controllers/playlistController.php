@@ -18,5 +18,7 @@ class playlistController extends Controller
     public function add($id) {
         $sp = new PlaylistSession();
         $sp->addSongToPlaylist($id);
+
+        return view('SongAdd.SongAdd', compact('sp'));
     }
 }
