@@ -16,11 +16,12 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('song')" :active="request()->routeIs('Song')">
-                        {{ __('song') }}
+                        {{ __('Song') }}
                     </x-nav-link>
-{{--                    <x-nav-link :href="route('playlist')" :active="request()->routeIs('playlist')">--}}
-{{--                        {{ __('playlist') }}--}}
-{{--                    </x-nav-link>--}}
+                    <x-nav-link :href="route('Playlist.index')" :active="request()->routeIs('playlist')">
+                            {{ __('Added songs') }}
+                        </x-nav-link>
+
 
                 </div>
             </div>
