@@ -27,6 +27,8 @@ Route::get('/Song', [\App\Http\Controllers\SongController::class, 'index'])->nam
 
 Route::get('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdd'])->name('songAdd');
 
+Route::post('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdding'])->name('songAdd');
+
 Route::get('/playlist', [App\Http\Controllers\playlistController::class, 'index'])->name('Playlist.index');
 Route::get('/playlist/add/{id}', [App\Http\Controllers\playlistController::class, 'add'])->name('playlist.add');
 require __DIR__.'/auth.php';

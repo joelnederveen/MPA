@@ -25,4 +25,16 @@ class SongController extends Controller
         return view('SongAdd.SongAdd', compact('Songs'));
 
     }
+    public function SongAdding(Request $request)
+    {
+        $Songs= Song::all();
+
+        $song = new Song();
+
+        $song->songname = $request->input('songName');
+        $song->genres = $request->input('genre');
+
+        $song->save();
+        return view('Song.Index', compact('Songs'));
+    }
 }
