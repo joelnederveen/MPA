@@ -29,6 +29,11 @@ Route::get('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdd'])
 
 Route::post('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAdding'])->name('songAdd');
 
+Route::get('/genreAdd', [\App\Http\Controllers\genreController::class, 'genreAdd'])->name('genreAdd');
+
+Route::post('/genreAdd', [\App\Http\Controllers\genreController::class, 'genreAdding'])->name('genreAdd');
+
+
 Route::get('/playlist', [App\Http\Controllers\playlistController::class, 'index'])->name('Playlist.index');
 Route::get('/playlist/add/{id}', [App\Http\Controllers\playlistController::class, 'add'])->name('playlist.add');
 
