@@ -31,4 +31,11 @@ Route::post('/songAdd', [\App\Http\Controllers\SongController::class, 'SongAddin
 
 Route::get('/playlist', [App\Http\Controllers\playlistController::class, 'index'])->name('Playlist.index');
 Route::get('/playlist/add/{id}', [App\Http\Controllers\playlistController::class, 'add'])->name('playlist.add');
+
+Route::get('/genre/{genre}', [App\Http\Controllers\genreController::class, 'index'])->name('genre.index');
+
+Route::get('/genre', [App\Http\Controllers\genreController::class, 'genre'])->name('genre');
+
+
+
 require __DIR__.'/auth.php';

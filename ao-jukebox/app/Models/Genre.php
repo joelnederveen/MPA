@@ -5,11 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Song extends Model
+class Genre extends Model
 {
     use HasFactory;
-
-    function genreName(){
-        return Genre::find($this->genres);
-    }
 }

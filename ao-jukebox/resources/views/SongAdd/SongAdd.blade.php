@@ -18,7 +18,12 @@
 
                     <x-label for="Genre" :value="__('Genre')" />
 
-                    <x-input id="genre" class="block mt-1 w-full" type="text" name="genre" :value="old('name')" required autofocus />
+                    <select id="genre" name="genre">
+                        @foreach($genres as $genre)
+                        <option value={{$genre->id}}>{{$genre->name}}</option>
+                        @endforeach
+                    </select>
+
 
 
                         <div class="flex items-center justify-end mt-4">

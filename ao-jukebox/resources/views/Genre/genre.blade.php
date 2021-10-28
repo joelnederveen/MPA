@@ -13,27 +13,23 @@
 
                     <table style="width: 50%;">
                         <tr>
-                            <th scope="col">Song</th>
-                            <th scope="col">SongID</th>
-                            <th scope="col">Datumtoegevoegd</th>
                             <th scope="col">Genre</th>
+
                         </tr>
-                    @foreach($Songs as $song)
-                        <tr>
-                            <td>{{$song->songname}}</td>
-                            <td><a href="/playlist/add/{{$song->id}}">Add to playlist</a></td>
-                            <td>{{$song->created_at}}</td>
-                            <td>{{$song->genreName()->name}}</td>
-                        </tr>
-                    @endforeach
+                        @foreach($Genres as $genre)
+                            <tr>
+                                <td>{{$genre->name}}</td>
+                                <td><a href="/genre/{{$genre->id}}">Go to genre</a></td>
+                            </tr>
+                        @endforeach
                     </table>
 
 
-                <br>
-                <br>
-                <br>
+                    <br>
+                    <br>
+                    <br>
 
+                </div>
             </div>
         </div>
-    </div>
 </x-app-layout>

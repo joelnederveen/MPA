@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\Song;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class SongController extends Controller
     public function index()
     {
         $Songs= Song::all();
-        return view('Song.Index', compact('Songs'));
+        $genre= Genre::all();
+        return view('Song.Index', compact('Songs', 'genre'));
     }
 
     public function playlist()
@@ -21,20 +23,21 @@ class SongController extends Controller
 
     public function SongAdd()
     {
-        $Songs= Song::all();
-        return view('SongAdd.SongAdd', compact('Songs'));
+        $genres= Genre::all();
+        return view('SongAdd.SongAdd', compact('genres'));
 
     }
     public function SongAdding(Request $request)
     {
-        $Songs= Song::all();
 
         $song = new Song();
+
+
 
         $song->songname = $request->input('songName');
         $song->genres = $request->input('genre');
 
         $song->save();
-        return view('Song.Index', compact('Songs'));
+        return view('Playlist.SongAdd');
     }
 }

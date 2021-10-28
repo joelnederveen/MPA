@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
          \App\Models\songs::factory(10)->create();
+        GenreSeeder::run();
     }
 }
