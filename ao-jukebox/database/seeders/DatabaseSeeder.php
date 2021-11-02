@@ -13,7 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\songs::factory(10)->create();
-        GenreSeeder::run();
+        $this->call([
+            GenreSeeder::class,
+            PlaylistSeeder::class,
+            SongSeeder::class
+        ]);
     }
 }

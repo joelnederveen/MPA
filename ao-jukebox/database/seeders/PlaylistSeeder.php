@@ -4,11 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Scalar\String_;
 use Illuminate\Support\Str;
 
-
-class GenreSeeder extends Seeder
+class PlaylistSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +15,7 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('genres')->insert([
+        DB::table('playlist')->insert([
             'name' => Str::random(10)
         ]);
     }
