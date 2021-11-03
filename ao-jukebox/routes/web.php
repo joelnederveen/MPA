@@ -33,9 +33,16 @@ Route::get('/genreAdd', [\App\Http\Controllers\genreController::class, 'genreAdd
 
 Route::post('/genreAdd', [\App\Http\Controllers\genreController::class, 'genreAdding'])->name('genreAdd');
 
+Route::post('/playlistAdd', [\App\Http\Controllers\playlistController::class, 'CreatePlaylistInDatabase'])->name('songAdd');
+
 
 Route::get('/playlist', [App\Http\Controllers\playlistController::class, 'index'])->name('Playlist.index');
-Route::get('/playlist/add/{id}', [App\Http\Controllers\playlistController::class, 'add'])->name('playlist.add');
+
+Route::get('/playlist/playlistAdd', [App\Http\Controllers\playlistController::class, 'CreatePlaylistInDatabase'])->name('playlistAdd');
+Route::post('/playlist/playlistAdd', [App\Http\Controllers\playlistController::class, 'CreatingPlaylistInDatabase'])->name('playlistAdding');
+
+
+
 
 Route::get('/genre/{genre}', [App\Http\Controllers\genreController::class, 'index'])->name('genre.index');
 
