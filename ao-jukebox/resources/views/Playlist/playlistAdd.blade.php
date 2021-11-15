@@ -18,7 +18,18 @@
 
 
 
+{{--                    <select id="song" name="song">--}}
+{{--                        @foreach($songs as $song)--}}
+{{--                            <option value={{$song->id}}>{{$song->songname}}</option>--}}
+{{--                        @endforeach--}}
+{{--                    </select>--}}
 
+                    @foreach($sp->getPlaylist() as $song)
+                        <tr>
+                            <td>{{$song->songname}}</td>
+                            <br>
+                        </tr>
+                    @endforeach
 
 
 

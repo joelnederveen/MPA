@@ -16,6 +16,7 @@
                         </tr>
                     @endforeach
                 </div>
+
             </div>
         </div>
     </div>

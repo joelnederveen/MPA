@@ -17,7 +17,9 @@ class Playlist extends Model
      */
     public function Songs()
     {
-
     }
 
+    function songName(){
+        return Playlist::find($this->songs);
+    }
 }

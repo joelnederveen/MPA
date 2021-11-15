@@ -24,9 +24,19 @@
                     <x-nav-link :href="route('Playlist.index')" :active="request()->routeIs('playlist')">
                             {{ __('Added songs') }}
                         </x-nav-link>
+                    <x-nav-link :href="route('playlistAdd')" :active="request()->routeIs('playlistAdd')">
+                        {{ __("add session to database") }}
+                    </x-nav-link>
                     <x-nav-link :href="route('genre')" :active="request()->routeIs('genre')">
                         {{ __("Genre's") }}
                     </x-nav-link>
+                    <x-nav-link :href="route('genreAdd')" :active="request()->routeIs('genreAdd')">
+                        {{ __("Add Genre") }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('databasePlaylist')" :active="request()->routeIs('databasePlaylist')">
+                        {{ __("Playlist's") }}
+                    </x-nav-link>
+
 
 
                 </div>

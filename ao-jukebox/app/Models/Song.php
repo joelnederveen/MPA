@@ -12,4 +12,5 @@ class Song extends Model
     function genreName(){
         return Genre::find($this->genres);
     }
+
 }

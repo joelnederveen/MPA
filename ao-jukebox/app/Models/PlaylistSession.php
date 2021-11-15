@@ -44,6 +44,10 @@ class PlaylistSession
         return $songs;
     }
 
+    public function deleteSession(){
+        Session::forget('playlist');
+    }
+
 
 
 }

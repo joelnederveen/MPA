@@ -10,4 +10,12 @@ class PlaylistSong extends Model
     use HasFactory;
 
     protected $table = 'playlist_song';
+
+    function songName(){
+//        dd($this);
+        return Song::find($this->song_id);
+    }
+
+
+
 }
