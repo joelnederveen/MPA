@@ -16,7 +16,7 @@
                             <th scope="col">Song</th>
                             <th scope="col">SongID</th>
                             <th scope="col">Datumtoegevoegd</th>
-                            
+
                         </tr>
                         @foreach($Songs as $song)
                             <tr>
